@@ -11,4 +11,4 @@ The Dashboard console app will handle the command that sends from the product ap
 
 That's all about this system, it can log every related information by using correlation id.
 
-AspNetCore, Serilog, MassTransit, RabbitMQ
+#AspNetCore, #Serilog, #MassTransit, #RabbitMQ
