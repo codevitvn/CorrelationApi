@@ -1,0 +1,22 @@
+{
+  "Serilog": {
+    "Using": ["Serilog.Sinks.File"],
+    "MinimumLevel": {
+      "Default": "Warning",
+      "Override": {
+        "Microsoft": "Verbose",
+        "System": "Verbose"
+      }
+    },
+    "WriteTo": [
+      {
+        "Name": "File",
+        "Args": {
+          "path": "../logs/company-.log",
+          "rollingInterval": "Day",
+          "outputTemplate": "[{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} {IP} {CorrelationId} {Level:u3}] {ThreadId} {User} {Message:lj}{NewLine}{Exception}"
+        }
+      }
+    ]
+  }
+}

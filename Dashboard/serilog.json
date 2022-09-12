@@ -1,0 +1,22 @@
+{
+  "Serilog": {
+    "Using": ["Serilog.Sinks.File", "Serilog.Sinks.Console"],
+    "MinimumLevel": {
+      "Default": "Information",
+      "Override": {
+        "Microsoft": "Warning",
+        "System": "Warning"
+      }
+    },
+    "WriteTo": [
+      {
+        "Name": "File",
+        "Args": {
+          "path": "../logs/dashboard-.log",
+          "rollingInterval": "Day",
+          "outputTemplate": "[{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} {IP} {CorrelationId} {Level:u3}] {ThreadId} {User} {Message:lj}{NewLine}{Exception}"
+        }
+      }
+    ]
+  }
+}
